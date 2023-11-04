@@ -1,0 +1,167 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    font-size: large;
+    font-family: 'Roboto Condensed',Arial;
+}
+
+
+/* NAVIGATION BAR */
+
+.navbar{
+    position: fixed;
+    backdrop-filter: blur(4px);
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    
+
+    height: 75px;
+    width: 100%; 
+    z-index: 1;
+}
+
+
+
+.progress-container {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 98%;
+    height: 2px;
+    background: #818181;
+    margin: 0 1%;
+
+
+}
+  
+  .progress-bar {
+    position: relative;
+    bottom: 0px;
+    height: 2px;
+    background: #191a19;
+    width: 0%;
+}
+
+
+.name{
+    color: #131313;
+    position: absolute;
+    left: 20px;
+    top: 40%;
+    display: inline-block;
+}
+
+#namefont{
+    font-family: "Amatic SC";
+    font-weight: bold;
+}
+
+
+
+.link-box{
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    display: inline-block;
+}
+
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    color: #131313;
+  }
+  
+  .navbar a::before {
+    content: "";
+    position: absolute;
+    bottom: 40%; /* Position the line vertically in the middle */
+    left: 0;
+    width: 95%;
+    height: 3px; /* Line height */
+    background-color: #333;
+    transform: scaleX(0); /* Start with zero width */
+    transform-origin: center; /* Transform from the center */
+    transition: transform 0.3s cubic-bezier(0.5, -0.5, 0.5, 1.5); /* Use a custom cubic-bezier for bouncing effect */
+    opacity: 0.7; /* Adjust opacity as desired */
+  }
+  
+  .navbar a:hover::before {
+    transform: scaleX(1); /* Expand the line to full width on hover */
+  }
+
+
+
+
+/* BACKGROUND */
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2000px;
+    background-image: url(clouds.jpg);
+    background-size: cover;
+    opacity: 1;
+    transition: opacity 0.1s ease;
+    z-index: -1;
+  }
+
+.content {
+    position: relative;
+    background-color: black;
+    background-color: rgba(13,13,15,0.1)
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN CONTENT AREA */
+
+
+
+main {
+    margin: 0px;
+    padding: 0px;
+    transition: background-color 0.5s ease;
+}
+
+
+
+#main{height: 850px;}
+#about, #projects, #contact, #resume{
+    height: 1000px;
+}
+
+.text-box{
+    display: inline-block;
+    padding-top: 570px;
+    padding-left: 1%;
+    color: #fff;
+}
+
+#textboxtext{
+    font-size: 75px;
+    font-weight: 200;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  

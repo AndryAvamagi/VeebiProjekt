@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="stylemain.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+         $('a[href^="#"]').on('click', function(event) {
+            var target = $($(this).attr('href'));
+            if (target.length) {
+               event.preventDefault();
+               $('html, body').stop().animate({
+                  scrollTop: target.offset().top
+               }, 500);
+            }
+         });
+      });
+   </script>
+    
+    
+</head>
+<body>
+    <div style="overflow: hidden;">
+        <header>
+            
+            <div class="navbar">
+                
+                <div class="name">
+                    <span id="namefont"> Andry Avamägi</span> <span >| job title</span>
+                </div>
+
+                <div class="link-box"> 
+                    <a class="navbar-link" href="#main">main</a> |
+                    <a class="navbar-link" href="#about">about</a> |
+                    <a class="navbar-link" href="#projects">projects</a> |
+                    <a class="navbar-link" href="#resume">resume</a> |
+                    <a class="navbar-link" href="#contact">contact</a>
+                </div>
+
+                
+                
+                <div class="progress-container">
+                    <div class="progress-bar" id="myBar"></div>
+                    <script>
+                        window.onscroll = function() {myFunction()};
+                        
+                        function myFunction() {
+                        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                        var scrolled = (winScroll / height) * 100;
+                        document.getElementById("myBar").style.width = scrolled + "%";
+                        }
+                    </script>
+                </div>
+                
+
+            </div>
+        </header>
+        
+
+        <main>
+            <div class="container">
+                <div class="background-image"></div>
+                <div class="content">
+                    <section id="main">
+
+                        <div class="text-box">
+                        </div>
+
+
+                    </section>
+                    <section id="about"></section>
+                    <section id="projects">
+                        <h1>THIS IS NOT SEEN</h1>
+                    </section>
+                    <section id="resume"></section>
+                    <section id="contact"></section>
+                </div>
+
+            </div>
+            <script src="script.js"></script>
+
+
+
+        </main>
+
+
+
+    </div>
+</body>
+
+
+</html>
