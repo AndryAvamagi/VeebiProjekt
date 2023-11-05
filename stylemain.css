@@ -3,10 +3,14 @@
     margin: 0px;
     font-size: large;
     font-family: 'Roboto Condensed',Arial;
+
 }
 
 
-/* NAVIGATION BAR */
+/* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR */
+
+
+/* uldine */
 
 .navbar{
     position: fixed;
@@ -21,7 +25,99 @@
     z-index: 1;
 }
 
+/* koik üleval vasakul nimega seonduv */
 
+.name{
+    color: #131313;
+    position: absolute;
+    left: 20px;
+    top: 40%;
+    display: inline-block;
+}
+
+
+/* koik keskel sotsiaalmeedia iconlinkidega seonduv */
+
+
+.socials{
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 145px;
+    margin-top: -2px;
+}
+
+.imgLinkedIn{
+    width: 25px;
+    transform: 1s;
+}
+
+.imgLinkedIn:hover{
+    transform: scale(1);
+    content: url(./assets/linkedin.png);
+}
+
+.imgInstagram{
+    width: 25px;
+    transform: 1s;
+}
+
+.imgInstagram:hover{
+    transform: scale(1);
+    content: url(./assets/instagram.png);
+}
+
+.imgGoogle{
+    width: 25px;
+    transform: 1s;
+}
+
+.imgGoogle:hover{
+    transform: scale(1);
+    content: url(./assets/gmail.png);
+}
+
+
+
+
+/* koik uleval paremal navigationiga seonduv */
+
+.link-box{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 40%;
+}
+
+
+.navbarInternalLink{
+    position: relative;
+    text-decoration: none;
+    color: #131313;
+}
+  
+  .navbarInternalLink::before {
+    content: "";
+    position: absolute;
+    bottom: 40%; /* joone positsioon alt*/
+    left: 0;
+    width: 95%;
+    height: 3px; /* joone korgus */
+    background-color: #333;
+    transform: scaleX(0); /* joone pikkus enne hoverimist ehk  */
+    transform-origin: center; /* joone muutus algab keskelt */
+    transition: transform 0.3s cubic-bezier(0.5, -0.5, 0.5, 1.5); /* joone pikkuse muutuse efekt */
+    opacity: 0.7; /* joone labipaistvus */
+  }
+  
+  .navbarInternalLink:hover::before {
+    transform: scaleX(1); /* joone pikkus 100% parast hoverimist */
+  }
+
+
+  
+
+/* koik progressi joonega seonduv */
 
 .progress-container {
     position: absolute;
@@ -31,7 +127,6 @@
     height: 2px;
     background: #818181;
     margin: 0 1%;
-
 
 }
   
@@ -44,56 +139,8 @@
 }
 
 
-.name{
-    color: #131313;
-    position: absolute;
-    left: 20px;
-    top: 40%;
-    display: inline-block;
-}
 
-#namefont{
-    font-family: "Amatic SC";
-    font-weight: bold;
-}
-
-
-
-.link-box{
-    position: absolute;
-    right: 20px;
-    top: 40%;
-    display: inline-block;
-}
-
-.navbar a {
-    position: relative;
-    text-decoration: none;
-    color: #131313;
-  }
-  
-  .navbar a::before {
-    content: "";
-    position: absolute;
-    bottom: 40%; /* Position the line vertically in the middle */
-    left: 0;
-    width: 95%;
-    height: 3px; /* Line height */
-    background-color: #333;
-    transform: scaleX(0); /* Start with zero width */
-    transform-origin: center; /* Transform from the center */
-    transition: transform 0.3s cubic-bezier(0.5, -0.5, 0.5, 1.5); /* Use a custom cubic-bezier for bouncing effect */
-    opacity: 0.7; /* Adjust opacity as desired */
-  }
-  
-  .navbar a:hover::before {
-    transform: scaleX(1); /* Expand the line to full width on hover */
-  }
-
-
-
-
-/* BACKGROUND */
+/* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND */
 
 .background-image {
     position: absolute;
@@ -124,7 +171,7 @@
 
 
 
-/* MAIN CONTENT AREA */
+/* MAIN CONTENT AREA *//* MAIN CONTENT AREA *//* MAIN CONTENT AREA *//* MAIN CONTENT AREA *//* MAIN CONTENT AREA *//* MAIN CONTENT AREA *//* MAIN CONTENT AREA *//* MAIN CONTENT AREA *//* MAIN CONTENT AREA *//* MAIN CONTENT AREA *//* MAIN CONTENT AREA *//* MAIN CONTENT AREA *//* MAIN CONTENT AREA *//* MAIN CONTENT AREA */
 
 
 
