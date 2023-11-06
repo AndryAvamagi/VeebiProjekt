@@ -8,6 +8,15 @@
 
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    -ms-overflow-style: none;
+    scroll-behavior: none;
+}
+
 
 
 /* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR */
@@ -160,7 +169,7 @@
 
 .content {
     position: relative;
-    background-color: 1D1D1B;
+    background-color: #1D1D1B;
     background-color: rgba(13,13,15,0.1)
 }
 
