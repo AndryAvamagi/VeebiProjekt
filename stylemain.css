@@ -89,7 +89,15 @@ body{
     content: url(./assets/gmail.png);
 }
 
+.imgTwitterX{
+    width: 25px;
+    transform: 1s;
+}
 
+.imgTwitterX:hover{
+    transform: : scale(1);
+    content: url(./assets/TwitterX.png);
+}
 
 
 /* koik uleval paremal navigationiga seonduv */
