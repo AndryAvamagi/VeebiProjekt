@@ -7,19 +7,7 @@
     <link rel="stylesheet" href="stylemain.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
-    <script>
-      $(document).ready(function() {
-         $('a[href^="#"]').on('click', function(event) {
-            var target = $($(this).attr('href'));
-            if (target.length) {
-               event.preventDefault();
-               $('html, body').stop().animate({
-                  scrollTop: target.offset().top
-               }, 500);
-            }
-         });
-      });
-   </script>
+    <script src="./scripts/smoothscroll_script.js"></script>
     
     
 </head>
@@ -53,16 +41,7 @@
                 
                 <div class="progress-container"> <!-- Liikuv paar -->
                     <div class="progress-bar" id="myBar"></div>
-                    <script>
-                        window.onscroll = function() {myFunction()};
-                        
-                        function myFunction() {
-                        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                        var scrolled = (winScroll / height) * 100;
-                        document.getElementById("myBar").style.width = scrolled + "%";
-                        }
-                    </script>
+                    <script src="./scripts/progressBar_script.js"></script>
                 </div>
                 
 
@@ -89,8 +68,8 @@
                     <section id="contact"></section>
                 </div>
 
-            </div> <!-- java -->
-            <script src="script.js"></script>
+            </div> <!-- javascript -->
+            <script src="./scripts/script_opacity.js"></script>
 
 
 

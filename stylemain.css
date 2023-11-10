@@ -95,7 +95,7 @@ body{
 }
 
 .imgTwitterX:hover{
-    transform: : scale(1);
+    transform: scale(1);
     content: url(./assets/TwitterX.png);
 }
 
@@ -168,7 +168,7 @@ body{
     left: 0;
     width: 100%;
     height: 2000px;
-    background-image: url(clouds.jpg);
+    background-image: url(./assets/clouds.jpg);
     background-size: cover;
     opacity: 1;
     transition: opacity 0.1s ease;
