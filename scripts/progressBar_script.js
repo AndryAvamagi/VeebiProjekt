@@ -1,10 +1,9 @@
-window.onscroll = function() {myFunction()}; // initsialiseerib funktsiooni
-                        
-function myFunction() { 
-    var winScroll = document.documentElement.scrollTop; // hetke scroll positsioon y koordinaadil
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;  // kogu dokumendi kõrgus
-    var scrolled = (winScroll / height) * 100; // arvutab, mitu protsenti dokumendist on scrollitud juba
-    document.getElementById("myBar").style.width = scrolled + "%"; // muudab progressbari vastavalt 
-}
+window.addEventListener('scroll', () => {   //juhul kui juhtub event scroll, tee seda funktsiooni
+    var winScroll = document.documentElement.scrollTop; //scrolli y koordinaat
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight; //kogu dokumendi kõrgus ehk max y koordinaat
+    var scrolled = (winScroll / height) * 100; // arvuta protsent mis on scroll y koordinaat kogu dokumendi kõrgusest
+    document.getElementById("myBar").style.width = scrolled + "%"; // muuda css'is id MyBar laiust  
+    })
 
-// Koodi kirjutas meeskonnaliige Andry Avamägi
+// kirjutas Andry Avamägi
+

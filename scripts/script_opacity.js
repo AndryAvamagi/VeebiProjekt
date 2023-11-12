@@ -6,5 +6,6 @@ window.addEventListener('scroll', () => { //iga scrolliga, tee seda funktsiooni
   background.style.opacity = opacity.toFixed(2); // muuda klassi opacityt
 });
 
-// Koodi kirjutas Andry Avamägi
+// kirjutas Andry Avamägi
+
   
