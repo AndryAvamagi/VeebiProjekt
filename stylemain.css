@@ -5,18 +5,13 @@
     font-size: large;
     font-family: 'Roboto Condensed',Arial;
     font-weight: bold;
+    scroll-behavior: smooth;
 
 }
 
 body::-webkit-scrollbar{
     display: none;
 }
-
-body{
-    -ms-overflow-style: none;
-    scroll-behavior: none;
-}
-
 
 
 /* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR */
@@ -61,7 +56,6 @@ body{
 
 .imgLinkedIn{
     width: 25px;
-    transform: 1s;
 }
 
 .imgLinkedIn:hover{
@@ -71,7 +65,6 @@ body{
 
 .imgInstagram{
     width: 25px;
-    transform: 1s;
 }
 
 .imgInstagram:hover{
@@ -81,7 +74,6 @@ body{
 
 .imgGoogle{
     width: 25px;
-    transform: 1s;
 }
 
 .imgGoogle:hover{
@@ -91,7 +83,6 @@ body{
 
 .imgTwitterX{
     width: 25px;
-    transform: 1s;
 }
 
 .imgTwitterX:hover{
