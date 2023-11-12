@@ -7,4 +7,5 @@ window.addEventListener('scroll', () => { //iga scrolliga, tee seda funktsiooni
 });
 
 // kirjutas Andry Avamägi
+
   

@@ -1,4 +1,3 @@
-                        
 window.addEventListener('scroll', () => {   //juhul kui juhtub event scroll, tee seda funktsiooni
     var winScroll = document.documentElement.scrollTop; //scrolli y koordinaat
     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight; //kogu dokumendi kõrgus ehk max y koordinaat
@@ -7,3 +6,4 @@ window.addEventListener('scroll', () => {   //juhul kui juhtub event scroll, tee
     })
 
 // kirjutas Andry Avamägi
+
