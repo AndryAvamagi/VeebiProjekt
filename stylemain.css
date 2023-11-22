@@ -251,7 +251,14 @@ main {
 
 
 #main, #about, #projects, #contact, #resume{
-    height: 850px;
+    height: 650px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
 }
 
 .text-box{
@@ -268,8 +275,27 @@ main {
 
 /* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE */
 
+.container{
+    height: 99%;
+    width: 90%;
+    border: black solid 3px;
 
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  
+  
 
 
 
