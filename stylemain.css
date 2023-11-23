@@ -3,7 +3,7 @@
     margin: 0px;
     padding: 0px;
     font-size: large;
-    font-family: 'Roboto Condensed',Arial;
+    font-family: "arial BLACK";
     font-weight: bold;
     scroll-behavior: smooth;
 
@@ -248,10 +248,8 @@ main {
 }
 
 
-
-
 #main, #about, #projects, #contact, #resume{
-    height: 650px;
+    min-height: 700px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -274,37 +272,106 @@ main {
 }
 
 /* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE */
-
 .container{
     height: 99%;
     width: 90%;
-    border: black solid 3px;
+    
 
     margin-top: 200px; /* Paneb conteinerid allapoole, et näeks paremini välja */
 
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
     order: 0;
 
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+
+    text-align: left;
+
+    min-height: 0;
+
+}
+
+.container>*{
+    flex: 1 1 300px;
+}
+
+.containerV2_text{
+    display: flex;
+    flex-grow: 7;
+    order: 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-shrink: 1;
+
+    text-align: right;
+    padding: 40px;
+
+    border-right: #191a19 solid 2px;
+}
+
+
+
+
+.containerV3:nth-child(1){
+    display: block;
+    flex: 2 1 auto;
+    margin-bottom: 5%;
+    font-size: 50px;
+}
+
+#blue{
+    color: #1170A5;
+    font-size: 50px;
+}
+
+.containerV3:nth-child(2){
+    
+    display: block;
+    flex: 7 1 auto;
+    margin-bottom: 5%;
+}
+
+.containerV3:nth-child(3){
+    display: block;
+    flex: 1 1 auto;
+    border-top: #191a19 solid 2px;
+}
+
+.introIcons{
+    margin-top: 20px;
+}
+
+
+
+.containerV2_picture{
+    display: flex;
+    flex-grow: 3;
+    order: 1;
+    flex-shrink: 3;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    align-content: center;
+}
+
+.portrait{
+    width: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: floatingBubble 10s ease-in-out infinite;
+    background-image: url(assets/monkey.png);
+    background-size: cover;
+    box-shadow: 0 2px 50px #1170A5;
+}
+@keyframes floatingBubble {
+    0%{
+        border-radius: 40% 45% 60% 50% / 60% 55% 40% 50%; 
+    }
+    50%{
+        border-radius: 50% 55% 50% 40% / 50% 45% 45% 40%; 
+    }
+    100%{
+        border-radius: 40% 45% 60% 50% / 60% 55% 40% 50%; 
+    }
   }
-
-  
-  
-
-
-
-
-
-
-
-
-
-  
