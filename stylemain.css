@@ -277,6 +277,8 @@ main {
     width: 90%;
     
 
+    margin-top: 200px; /* Paneb conteinerid allapoole, et näeks paremini välja */
+
     flex-grow: 0;
     flex-shrink: 1;
     order: 0;
