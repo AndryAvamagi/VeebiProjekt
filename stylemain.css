@@ -280,6 +280,8 @@ main {
     width: 90%;
     border: black solid 3px;
 
+    margin-top: 200px; /* Paneb conteinerid allapoole, et näeks paremini välja */
+
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
