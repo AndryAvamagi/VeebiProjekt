@@ -402,9 +402,9 @@ button{
     padding: 10px 0;
     text-align: center;
     margin: 20px 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     font-weight: bold;
-    border: 2px solid #960000;
+    border: 5px solid #960000;
     background: transparent;
     color: #000000;
     cursor: pointer;
