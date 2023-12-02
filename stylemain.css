@@ -3,85 +3,82 @@
     margin: 0px;
     padding: 0px;
     font-size: large;
-    font-family: "arial BLACK";
+    font-family: 'SourceSansPro-Black.otf','Sharp Sans', sans-serif;
+                                                
     font-weight: bold;
     scroll-behavior: smooth;
+    text-decoration: none;
+    color: #191a19;
 
 }
+
+
 
 body::-webkit-scrollbar{
     display: none;
 }
 
 
+@font-face { 
+    font-family: 'MyFont'; 
+    src: 
+        url(./assets/font/SourceSansPro-Black.otf)  
+        format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+} 
+  
+
+body{
+    background-image: url(./assets/cloudfade2.0.jpg), url(./assets/croppedclouds.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+    background-size: contain 1;
+}
+
+
+
+
+
+
+
 /* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR */
 
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: normal;
-    align-items: stretch;
-    align-content: normal;
-    height: 100%;
-  }
-  
-  .flex-items1{
-    display: block;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: stretch;
-    order: 0;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: normal;
-    align-items: center;
-    align-content: stretch;
-
-    margin: 30px;
-  }
-  
-  .flex-items2{
-    display: block;
-    flex-grow: 1;
-    flex-shrink: 2;
-    flex-basis: auto;
-    align-self: stretch;
-    order: 0;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    align-content: stretch;
-  }
+ 
 
 .navbar{
     position: fixed;
+    display: flex;
     backdrop-filter: blur(4px);
-    display: block;
     padding: 0px;
     margin: 0px;
     
     height: 75px;
     width: 100%; 
     z-index: 1;
+
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
 }
 
 /* koik üleval vasakul nimega seonduv */
+.navBarItem1{
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-shrink: 2;
+    justify-content: center;
+    align-items: center;
+  }
+  
 
 .name{
     color: #1D1D1B;
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
 
     flex-wrap: wrap;
     border-right: black solid 2px;
@@ -93,17 +90,12 @@ body::-webkit-scrollbar{
 
 
 .socials{
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-
+    display: flex;
     margin-top: 5px;
     margin-left: 5px;
-
-
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 }
 
 .imgLinkedIn{
@@ -145,35 +137,51 @@ body::-webkit-scrollbar{
 
 /* koik uleval paremal navigationiga seonduv */
 
-.link-box{
-    margin: 30px;
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-}
+.navBarItem2{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 2;
+    flex-shrink: 0;
+  }
+
 
 
 .navbarInternalLink{
     position: relative;
-    text-decoration: none;
-    color: #1D1D1B;
+    margin-right: 1%;
+    display: flex;
+    justify-content: center;
+    padding-right: 0%;
+    padding-left: 1%;
+    border-left: black solid 2px;
+
 }
+
+@media only screen and (max-width: 800px){
+    .navBarItem2{
+        justify-content: center;
+    
+    }
+
+
+}
+
+#leftBorder{
+    border-left:black solid 2px;
+}
+
   
   .navbarInternalLink::before {
     content: "";
     position: absolute;
-    bottom: 35%; /* joone positsioon alt*/
-    left: 0;
-    width: 95%;
+    bottom: 43%; /* joone positsioon alt*/
+    left: 4%;
+    width: 100%;
     height: 3px; /* joone paksus */
     background-color: #1D1D1B;
     transform: scaleX(0); /* joone pikkus enne hoverimist ehk  */
     transform-origin: center; /* joone muutus algab keskelt */
     transition: transform 0.3s cubic-bezier(0.5, -0.5, 0.5, 1.5); /* joone pikkuse muutuse efekt */
-    opacity: 0.9; /* joone labipaistvus */
   }
   
   .navbarInternalLink:hover::before {
@@ -190,50 +198,18 @@ body::-webkit-scrollbar{
     bottom: 0;
     display: block;
     width: 98%;
-    height: 2px;
+    height: 3px;
     background: #818181;
     margin: 0 1%;
 
 }
-  
-  .progress-bar {
+.progress-bar {
     position: relative;
     bottom: 0px;
-    height: 2px;
+    height: 3px;
     background: #191a19;
     width: 0%;
 }
-
-
-
-/* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND */
-
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2000px;
-    background-image: url(./assets/cloudfade.jpg);
-    background-size: cover;
-    opacity: 1;
-    transition: opacity 0.1s ease;
-    z-index: -1;
-  }
-
-.content {
-    position: relative;
-    background-color: #1D1D1B;
-    background-color: rgba(13,13,15,0.1)
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -244,20 +220,54 @@ body::-webkit-scrollbar{
 main {
     margin: 0px;
     padding: 0px;
-    transition: background-color 0.5s ease;
+    width: 100%;
+    z-index: 1;
 }
 
 
-#main, #about, #projects, #contact, #resume{
-    min-height: 700px;
+
+
+#main, #about, #projects, #contact, #career{
+    min-width: none;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
+    height: 100%;
 
 }
+
+
+/* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area */
+
+
+#firstPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    font-size: 5vw;
+    line-height: 150%;
+}
+
+#firstPageText{
+    font-size: 10vw;
+    text-align: center;
+    font-weight: 1000;
+}
+
+#bottomText{
+    color: #1170A5;
+    font-size: 5vw;
+    font-weight: 700;
+}
+
+
+
 
 
 
@@ -278,7 +288,6 @@ main {
 
     text-align: left;
 
-    min-height: 0;
 }
 
 .container>*{
@@ -296,7 +305,7 @@ main {
     text-align: right;
     padding: 40px;
 
-    border-right: #191a19 solid 2px;
+    border-right: #1D1D1B solid 2px;
 }
 
 
@@ -325,7 +334,8 @@ main {
 .containerV3:nth-child(3){
     display: block;
     flex: 1 1 auto;
-    border-top: #191a19 solid 2px;
+    border-top: #1D1D1B solid 2px;
+
 }
 
 .introIcons{
@@ -342,6 +352,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
 }
 
 .portrait{
@@ -366,41 +377,101 @@ main {
     }
   }
 
-<<<<<<< Updated upstream
 /* RESUME OSA *//* RESUME OSA *//* RESUME OSA *//* RESUME OSA *//* RESUME OSA *//* RESUME OSA *//* RESUME OSA */
 
-.container_resume {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 0fr;
-  gap: 100px 400px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "PDF PDF Lae_alla"
-    "PDF PDF Lae_alla"
-    ". . .";
+.career-container{
+    display: flex;
+    flex-direction: column;
 }
 
-.PDF { grid-area: PDF;
-  text-align: center;
+.career-element{
+    padding-top: 10px;
+    padding-bottom: 50px;
+    border-top: #BABABA solid 1.5px;
+
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px 1fr;
+
+    grid-template-areas:    
+    "careerIcon careerHeading"
+    "careerStructure careerInfo";
 }
 
-.Lae_alla { grid-area: Lae_alla;
-  text-align: center;
+#careerHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    padding: 10vh 0;
 }
 
-button{
-    width: 250px;
-    padding: 10px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border-radius: 10px;
+
+#careerHeading{
+    
+    grid-area: careerHeading;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+     
+}
+#careerHeadingInfoV1{
+    display: flex;
+    flex-shrink: 0;
+}
+#careerHeadingInfoV2{
+    display: flex;
+    font-size: 50%;
+    color: #5b5e5b;
+    flex-shrink: 1;
+    max-width: auto;
     font-weight: bold;
-    border: 5px solid #960000;
-    background: transparent;
-    color: #000000;
-    cursor: pointer;
 }
-=======
+
+
+#careerHeadingInfoV3{
+    display: flex;
+    font-size: 50%;
+    color: #555555;
+    flex-shrink: 1;
+}
+
+#bulletpoints{
+    font-size: 110%;
+}
+
+#careerStructure{
+    grid-area: careerStructure;   
+
+    display: flex;
+    align-items: center;
+}
+
+#careerStructureHelpBox{
+    height: 120%;
+    width: 50%;
+    border-right: #BABABA solid 2px;
+    margin-top: -10%;
+}
+
+#careerIcon{
+    grid-area: careerIcon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#careerIconSize{
+    width: 55%;
+}
+
+#careerInfo{
+    grid-area: careerInfo;
+    
+}
+
+
 
 /* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJ ECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION */
 
@@ -409,20 +480,19 @@ button{
  }
 
  .projectsContainer{
-    height: 100vh;
-    grid-gap: 0.4rem;
-
+    height: 150vh;
+    grid-gap: 0.9rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 
     grid-template-areas:
     "heading heading heading heading heading"
-    "projectInfo1 projectInfo1 projectPicture1 projectPicture1 projectPicture1"
+    "p1 p2 projectPicture1 projectPicture1 projectInfo1"
     "projectPicture2 projectPicture2 projectPicture2 projectInfo2 projectInfo2"
     "projectInfo3 projectInfo3 projectPicture3 projectPicture3 projectPicture3"
-    "projectPicture4 projectPicture4 projectPicture4 projectInfo4 projectInfo4"
-    "projectInfo5 projectInfo5 projectPicture5 projectPicture5 projectPicture5";
+    "p4 projectPicture4 projectPicture4 projectInfo4 projectInfo4"
+    "projectPicture5 projectPicture5 projectInfo5 projectInfo5 p6";
 
 }
 
@@ -435,16 +505,17 @@ button{
     grid-area: projectPicture1;
 }
 #projectInfo1{
-    justify-content: end;
     grid-area: projectInfo1;
-    text-align: right;
 }
+
+
 
 #projectPicture2{
     grid-area: projectPicture2;
 }
 #projectInfo2{
     grid-area: projectInfo2;
+    display: block;
 }
 
 #projectPicture3{
@@ -467,12 +538,17 @@ button{
     grid-area: projectPicture5;
 }
 #projectInfo5{
-    justify-content: end;
     grid-area: projectInfo5;
-    text-align: right;
 }
 
-#projectInfo1, #projectInfo2, #projectInfo3, #projectInfo4, #projectInfo5, #heading{
+#projectInfo1, #projectInfo2, #projectInfo3, #projectInfo4, #projectInfo5{
+    flex-direction: column;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+}
+
+#heading{
     align-content: center;
     display: flex;
     align-items: center;
@@ -482,43 +558,63 @@ button{
 @media only screen and (max-width: 657px){
     .projectsContainer{
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 3fr 2fr 3fr 2fr 3fr 2fr 3fr 2fr 3fr 2fr;
+        grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr;
         grid-template-areas: 
         "heading"
         "projectPicture1"
-        "projectInfo1"
         "projectPicture2"
-        "projectInfo2"
         "projectPicture3"
-        "projectInfo3"
         "projectPicture4"
-        "projectInfo4"
-        "projectPicture5"
-        "projectInfo5";
+        "projectPicture5";
     }
+
+
+
+
 
     #projectPicture2, #projectPicture3, #projectPicture4, #projectPicture5{
         border-top: #191a19 solid 2px;
         padding-top: 10px;
     }
 
-    #projectInfo1, #projectInfo2, #projectInfo3, #projectInfo4, #projectInfo5{
-        justify-content: center;
-        text-align: center;
+    #projectInfo1, #projectInfo2, #projectInfo3, #projectInfo4, #projectInfo5, .flex-items1{
+        display: none;
+    
     }
 
+    /* .flex-items2{
+        justify-content: center;
+    } */
 
+
+    
 }
+
+#projectName{
+    font-size: 180%;
+    font-weight: bold;
+}
+#projectNameInfo{
+    margin-top: -2%;
+    color: #1170A5;
+    font-size: 70%;
+    font-weight: bold;
+}
+
+
 
 
 
 .projectPicture {
     height: 100%;
     width: 100%;
-    background-color: #1170A5;
-    transition: transform 1s;
+    background-color: #BABABA;
+    transition: transform 0.5s;
     overflow: hidden;
     position: relative;
+    box-shadow: 0 2px 50px #BABABA;
+
+    /* animation: rightToLeft 5s ease-in-out infinite; */
 }
 .projectPicture:hover{
     transform: scale(.9);
@@ -531,7 +627,7 @@ button{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: transform 1s;
+    transition: transform 0.5s;
     
 }
 
@@ -540,6 +636,110 @@ button{
 }
 
 
+/* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO */
 
 
->>>>>>> Stashed changes
+.contactContainer{
+    width: 100%;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+
+#contactMain{
+    backdrop-filter: blur(4px);
+    height: 17vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: #1D1D1B solid 2px;
+    flex-wrap: wrap;
+
+}
+
+#personalInfo{
+    margin-left: 1%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#personalInfo span{
+    font-size: 1.5vw;
+    display: flex;
+    font-weight: bold;
+}
+
+#contactSocials{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+#contactCV{
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0  ;
+}
+
+#contactCV span{
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+#contactIconDownload{
+    width: 3vw;
+}
+
+#contactIcon{
+    width: 6vw;
+}
+
+
+@media only screen and (max-width: 500px){
+    #contactMain{
+        flex-direction:column;
+        height: 25vw;
+    }
+    #contactSocials{
+        align-items: center;
+    }
+    #personalInfo{
+        align-items: center;
+    }
+}
+
+#copyright{
+    display: flex;
+    order: 1;
+    border-top: #1D1D1B solid 2px;
+    width: 100%;
+    height: 5vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    font-weight: 1000;
+    backdrop-filter: blur(4px);
+}
+
+#contentLinks img:hover{
+    transform: scale(0.9);
+}
+#contactIconDownload:hover{
+    transform: scale(0.9);
+}
+
+
+
+    
