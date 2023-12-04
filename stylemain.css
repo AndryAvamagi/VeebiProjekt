@@ -3,85 +3,82 @@
     margin: 0px;
     padding: 0px;
     font-size: large;
-    font-family: 'Roboto Condensed',Arial;
+    font-family: 'SourceSansPro-Black.otf','Sharp Sans', sans-serif;
+                                                
     font-weight: bold;
     scroll-behavior: smooth;
+    text-decoration: none;
+    color: #191a19;
 
 }
+
+
 
 body::-webkit-scrollbar{
     display: none;
 }
 
 
+@font-face { 
+    font-family: 'MyFont'; 
+    src: 
+        url(./assets/font/SourceSansPro-Black.otf)  
+        format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+} 
+  
+
+body{
+    background-image: url(./assets/cloudfade2.0.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+    display: flex;
+}
+
+
+
+
+
+
+
 /* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR *//* NAVIGATION BAR */
 
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: normal;
-    align-items: stretch;
-    align-content: normal;
-    height: 100%;
-  }
-  
-  .flex-items1{
-    display: block;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: stretch;
-    order: 0;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: normal;
-    align-items: center;
-    align-content: stretch;
-
-    margin: 30px;
-  }
-  
-  .flex-items2{
-    display: block;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: stretch;
-    order: 0;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    align-content: stretch;
-  }
+ 
 
 .navbar{
     position: fixed;
+    display: flex;
     backdrop-filter: blur(4px);
-    display: block;
     padding: 0px;
     margin: 0px;
     
     height: 75px;
     width: 100%; 
     z-index: 1;
+
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
 }
 
 /* koik üleval vasakul nimega seonduv */
+.navBarItem1{
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-shrink: 2;
+    justify-content: center;
+    align-items: center;
+  }
+  
 
 .name{
     color: #1D1D1B;
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
 
     flex-wrap: wrap;
     border-right: black solid 2px;
@@ -93,17 +90,12 @@ body::-webkit-scrollbar{
 
 
 .socials{
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-
+    display: flex;
     margin-top: 5px;
     margin-left: 5px;
-
-
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 }
 
 .imgLinkedIn{
@@ -145,35 +137,52 @@ body::-webkit-scrollbar{
 
 /* koik uleval paremal navigationiga seonduv */
 
-.link-box{
-    margin: 30px;
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-}
+.navBarItem2{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 2;
+    flex-shrink: 0;
+  }
+
 
 
 .navbarInternalLink{
     position: relative;
-    text-decoration: none;
-    color: #1D1D1B;
+    margin-right: 1%;
+    display: flex;
+    justify-content: center;
+    padding-right: 0%;
+    padding-left: 1%;
+    border-left: black solid 2px;
+
 }
+
+@media only screen and (max-width: 800px){
+    .navBarItem2{
+        justify-content: center;
+    
+    }
+
+
+}
+
+#leftBorder{
+    border-left:black solid 2px;
+}
+
   
   .navbarInternalLink::before {
+    z-index: 0;
     content: "";
     position: absolute;
     bottom: 40%; /* joone positsioon alt*/
-    left: 0;
-    width: 95%;
-    height: 3px; /* joone korgus */
+    left:0.3vw;
+    width: 100%;
+    height: 3px; /* joone paksus */
     background-color: #1D1D1B;
     transform: scaleX(0); /* joone pikkus enne hoverimist ehk  */
     transform-origin: center; /* joone muutus algab keskelt */
     transition: transform 0.3s cubic-bezier(0.5, -0.5, 0.5, 1.5); /* joone pikkuse muutuse efekt */
-    opacity: 0.9; /* joone labipaistvus */
   }
   
   .navbarInternalLink:hover::before {
@@ -190,50 +199,18 @@ body::-webkit-scrollbar{
     bottom: 0;
     display: block;
     width: 98%;
-    height: 2px;
+    height: 3px;
     background: #818181;
     margin: 0 1%;
 
 }
-  
-  .progress-bar {
+.progress-bar {
     position: relative;
     bottom: 0px;
-    height: 2px;
+    height: 3px;
     background: #191a19;
     width: 0%;
 }
-
-
-
-/* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND *//* BACKGROUND */
-
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2000px;
-    background-image: url(./assets/clouds.jpg);
-    background-size: cover;
-    opacity: 1;
-    transition: opacity 0.1s ease;
-    z-index: -1;
-  }
-
-.content {
-    position: relative;
-    background-color: #1D1D1B;
-    background-color: rgba(13,13,15,0.1)
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -244,65 +221,562 @@ body::-webkit-scrollbar{
 main {
     margin: 0px;
     padding: 0px;
-    transition: background-color 0.5s ease;
+    width: 100%;
+    z-index: 1;
 }
 
 
 
 
-#main, #about, #projects, #contact, #resume{
-    height: 650px;
+#main, #about, #projects, #contact, #career, #project{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
+    height: 100%;
 
 }
 
-.text-box{
-    display: inline-block;
-    padding-top: 570px;
-    padding-left: 1%;
-    color: #fff;
+#project{
+    background: white;
+    width: 90%;
+    display: flex;
+    align-self: center;
 }
 
-#textboxtext{
-    font-size: 75px;
-    font-weight: 200;
+
+/* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area *//* main area */
+
+
+#firstPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    font-size: 5vw;
+    line-height: 150%;
+    animation: 1s ease-out 0s 1 slideInFromTop;
 }
+
+#firstPageText{
+    font-size: 10vw;
+    text-align: center;
+    font-weight: 1000;
+}
+
+#bottomText{
+    color: #1170A5;
+    font-size: 5vw;
+    font-weight: 700;
+}
+
+
+
+
+
 
 /* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE *//* INTRODUCTION AND PICTURE */
-
 .container{
     height: 99%;
     width: 90%;
-    border: black solid 3px;
+    
+    margin-top: 75px;
 
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
     order: 0;
 
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    align-content: center;
+
+    text-align: left;
+
+}
+
+.container>*{
+    flex: 1 1 300px;
+}
+
+.containerV2_text{
+    display: flex;
+    flex-grow: 7;
+    order: 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-shrink: 1;
+
+    text-align: right;
+    padding: 40px;
+
+    border-right: #1D1D1B solid 2px;
+}
+
+
+
+
+
+.containerV3:nth-child(1){
+    display: block;
+    flex: 2 1 auto;
+    margin-bottom: 5%;
+    font-size: 50px;
+}
+
+.blue{
+    color: #1170A5;
+    font-size: 50px;
+}
+
+.containerV3:nth-child(2){
+    text-align: right;
+    display: block;
+    flex: 7 1 auto;
+    margin-bottom: 5%;
+}
+
+.containerV3:nth-child(3){
+    display: block;
+    flex: 1 1 auto;
+    border-top: #1D1D1B solid 2px;
+
+}
+
+.introIcons{
+    margin-top: 20px;
+}
+
+
+
+.containerV2_picture{
+    display: flex;
+    flex-grow: 3;
+    order: 1;
+    flex-shrink: 3;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.portrait{
+    width: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: floatingBubble 10s ease-in-out infinite;
+    background-image: url(assets/profilepic.png);
+    background-size: cover;
+    box-shadow: 0 2px 50px #1170A5;
+    
+}
+@keyframes floatingBubble {
+    0%{
+        border-radius: 40% 45% 60% 50% / 60% 55% 40% 50%; 
+    }
+    50%{
+        border-radius: 50% 55% 50% 40% / 50% 45% 45% 40%; 
+    }
+    100%{
+        border-radius: 40% 45% 60% 50% / 60% 55% 40% 50%; 
+    }
   }
 
-  
-  
+/* RESUME OSA *//* RESUME OSA *//* RESUME OSA *//* RESUME OSA *//* RESUME OSA *//* RESUME OSA *//* RESUME OSA */
+
+.career-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.career-element{
+    padding-top: 10px;
+    padding-bottom: 50px;
+    border-top: #BABABA solid 1.5px;
+
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px 1fr;
+
+    grid-template-areas:    
+    "careerIcon careerHeading"
+    "careerStructure careerInfo";
+}
+
+#careerHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    padding: 10vh 0;
+}
+
+
+.careerHeading{
+    
+    grid-area: careerHeading;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+     
+}
+.careerHeadingInfoV1{
+    display: flex;
+    flex-shrink: 0;
+}
+.careerHeadingInfoV2{
+    display: flex;
+    font-size: 50%;
+    color: #5b5e5b;
+    flex-shrink: 1;
+    font-weight: bold;
+}
+
+
+.careerHeadingInfoV3{
+    display: flex;
+    font-size: 50%;
+    color: #555555;
+    flex-shrink: 1;
+}
+
+.bulletpoints{
+    font-size: 110%;
+}
+
+.careerStructure{
+    grid-area: careerStructure;   
+
+    display: flex;
+    align-items: center;
+}
+
+.careerStructureHelpBox{
+    height: 120%;
+    width: 50%;
+    border-right: #BABABA solid 2px;
+    margin-top: -10%;
+}
+
+.careerIcon{
+    grid-area: careerIcon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.careerIconSize{
+    width: 55%;
+}
+
+.careerInfo{
+    grid-area: careerInfo;
+    
+}
+
+
+
+/* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJ ECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION *//* PROJECTS SECTION */
+
+ .headingsize{
+    font-size: 50px;
+ }
+
+ .projectsContainer{
+    height: 150vh;
+    grid-gap: 0.9rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    grid-template-areas:
+    "heading heading heading heading heading"
+    "p1 p2 projectPicture1 projectPicture1 projectInfo1"
+    "projectPicture2 projectPicture2 projectPicture2 projectInfo2 projectInfo2"
+    "projectInfo3 projectInfo3 projectPicture3 projectPicture3 projectPicture3"
+    "p4 projectPicture4 projectPicture4 projectInfo4 projectInfo4"
+    "projectPicture5 projectPicture5 projectInfo5 projectInfo5 p6";
+
+}
+
+#heading{
+    grid-area: heading;
+    justify-content: center;
+}
+
+#projectPicture1{
+    grid-area: projectPicture1;
+}
+#projectInfo1{
+    grid-area: projectInfo1;
+}
+
+
+
+#projectPicture2{
+    grid-area: projectPicture2;
+}
+#projectInfo2{
+    grid-area: projectInfo2;
+    display: block;
+}
+
+#projectPicture3{
+    grid-area: projectPicture3;
+}
+#projectInfo3{
+    justify-content: end;
+    grid-area: projectInfo3;
+    text-align: right;
+}
+
+#projectPicture4{
+    grid-area: projectPicture4;
+}
+#projectInfo4{
+    grid-area: projectInfo4;
+}
+
+#projectPicture5{
+    grid-area: projectPicture5;
+}
+#projectInfo5{
+    grid-area: projectInfo5;
+}
+
+#projectInfo1, #projectInfo2, #projectInfo3, #projectInfo4, #projectInfo5{
+    flex-direction: column;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+}
+
+#heading{
+    align-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 657px){
+    .projectsContainer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr;
+        grid-template-areas: 
+        "heading"
+        "projectPicture1"
+        "projectPicture2"
+        "projectPicture3"
+        "projectPicture4"
+        "projectPicture5";
+    }
 
 
 
 
 
+    #projectPicture2, #projectPicture3, #projectPicture4, #projectPicture5{
+        border-top: #191a19 solid 2px;
+        padding-top: 10px;
+    }
+
+    #projectInfo1, #projectInfo2, #projectInfo3, #projectInfo4, #projectInfo5, .flex-items1{
+        display: none;
+    
+    }
+
+    /* .flex-items2{
+        justify-content: center;
+    } */
+
+
+    
+}
+
+.projectName{
+    font-size: 180%;
+    font-weight: bold;
+}
+.projectNameInfo{
+    color: #1170A5;
+    font-size: 70%;
+    font-weight: bold;
+}
 
 
 
 
-  
+
+.projectPicture {
+    height: 100%;
+    width: 100%;
+    background-color: #BABABA;
+    transition: transform 0.5s;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 50px #BABABA;
+
+    /* animation: rightToLeft 5s ease-in-out infinite; */
+}
+.projectPicture:hover{
+    transform: scale(.9);
+}
+
+.picture1{
+    width: 100%;
+    height: 100%;
+    background: url(assets/snake.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 0.5s;
+    
+}
+
+.picture1:hover{
+    transform: scale(1.2);
+}
+
+
+/* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO *//* CONTACT INFO */
+
+
+.contactContainer{
+    width: 100%;
+    height: 22vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    backdrop-filter: blur(4px);
+    background-color: #f0efef;
+}
+
+
+
+#contactMain{
+    backdrop-filter: blur(4px);
+    height: 17vw;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: #1D1D1B solid 1px;
+    flex-wrap: wrap;
+
+}
+
+#personalInfo{
+    margin-left: 1%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#personalInfo span{
+    font-size: 1.5vw;
+    display: flex;
+    font-weight: bold;
+}
+
+#contactSocials{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+#contactCV{
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0  ;
+}
+
+#contactCV span{
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+#contactIconDownload{
+    width: 3vw;
+}
+
+.contactIcon{
+    width: 6vw;
+}
+
+
+@media only screen and (max-width: 400px){
+    #contactMain{
+        flex-direction:column;
+        height: 25vw;
+    }
+    #contactSocials{
+        align-items: center;
+    }
+    #personalInfo{
+        align-items: center;
+    }
+
+    #personalInfo span{
+        font-size: 3vw;
+    }
+
+    #contactContainer{
+        background-color: #f0efef;
+    }
+
+    #contactCV span{
+        font-size: 4vw;
+    }
+
+    #copyright{
+        font-size: 3vw;
+    }
+
+    #contactSocials{
+        font-size: 4vw;
+    }
+
+
+}
+
+#copyright{
+    display: flex;
+    order: 1;
+    border-top: #1D1D1B solid 1px;
+    width: 90%;
+    height: 5vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    font-weight: 100;
+    backdrop-filter: blur(4px);
+}
+
+.contentLinks img:hover{ 
+    transform: scale(0.9);
+}
+#contactIconDownload:hover{
+    transform: scale(0.9);
+}
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
