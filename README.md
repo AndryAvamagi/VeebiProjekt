@@ -1,22 +1,7 @@
-# personal_portfolia
+![Hello](https://github.com/mamikek/Sissejuh/blob/main/Main.png)
+# Meist ja projektist
 
+Me lõime personaalse veebiportfolio šablooni (template). Eesmärk on luua veebileht, mida iga tiimiliige saab peale projekti valmimist oma maitse(taustapilt, värviskeem jne..) ning info põhjal ära täita. Tulemusena saab valmis esteetiline veebiportfoolio, mida on võimalik esitada tööotsingutel.  Leht sisaldab indiviidi lühitutvustust (isisksus, oskused, saavutused), pilti, isiklikeprojektide kajastustust, eraldi välja toodud ka cv ja kontaktiinfo (sh sots. meedia, mobiili nr ja gmail). Algne plaan on teha kõik ühele lehele, millel on võimalik navigeerida ülemise riba abil. Lisaks teeme nii eestikeelse kui ka inglisekeelse variandi.
 
-## To Do
-
-0) connect with git +
-1) find good few fonts -
-2) make main page attractive -
-3) Social media icon links to nav bar +
-4) short introduction of yourself -
-5) add picrture with a nice floating frame -
-6) attractive projects display -
-
-7) indication on with part of the page you are -
-![Alt text](image.png)
-
-8) make a resume page with a seperate resume window -
-
-9) contact info -
-
-10) english and estonian text translation' -
-
+### [Tiim](https://github.com/AndryAvamagi/VeebiProjekt/wiki/Meie-tiim) koosneb kolmest liikmest: Andry, Mirko ja Olle.
+### Uuri lisa lugedes meie [Wikit](https://github.com/AndryAvamagi/VeebiProjekt/wiki)
