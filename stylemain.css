@@ -172,7 +172,7 @@ body{
 
   
   .navbarInternalLink::before {
-    z-index: 0;
+    z-index: -1;
     content: "";
     position: absolute;
     bottom: 40%; /* joone positsioon alt*/
